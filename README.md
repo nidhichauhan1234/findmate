@@ -1,12 +1,20 @@
-# React + Vite
+FindMate is a web platform designed to simplify the process of finding and managing teams for hackathons. It enables participants to create profiles, discover upcoming hackathons, form or join teams, send join requests, and communicate seamlessly within their teams — all in one place.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Key Features
+User Authentication: Secure signup and login using Firebase Authentication.
 
-Currently, two official plugins are available:
+Profile Management: Users can create and update detailed profiles including skills, batch, branch, and college.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Hackathon Listings: Browse and view upcoming hackathons with relevant details.
 
-## Expanding the ESLint configuration
+Team Creation and Discovery: Create new teams specifying required skills or join existing ones.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Join Requests Management: Send, accept, and reject team join requests with real-time updates.
+
+Team Chat: Facilitate real-time communication among team members.
+
+Responsive UI: Clean, user-friendly, and mobile-responsive design.
+
+
+
+Hackathons thrive on collaboration and teamwork, but finding the right teammates can be challenging. FindMate was built to solve this problem by providing a centralized, easy-to-use platform where hackathon participants can efficiently find suitable teammates, manage their teams, and communicate — making the hackathon experience smoother and more enjoyable
