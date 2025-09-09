@@ -1,0 +1,443 @@
+
+/* ---------- Navbar ---------- */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1200;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #ffffff 0%, #e9f3ff 100%);
+  box-shadow: 0 6px 18px rgba(0, 50, 120, 0.12);
+  padding: 18px 36px;
+  font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  transition: background 0.3s ease;
+}
+
+.navbar-logo {
+  font-size: 2rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  color: #1a4dab;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.navbar-right {
+  display: flex;
+  gap: 18px;
+}
+
+.navbar-link {
+  color: #1a4dab;
+  font-size: 1.05rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 30px;
+  background: #ffffff;
+  padding: 9px 26px;
+  margin: 0 3px;
+  box-shadow: 0 2px 10px rgba(26, 77, 171, 0.1);
+  transition: background 0.25s, box-shadow 0.25s, color 0.25s, transform 0.18s;
+  outline: none;
+  border: 1px solid #1a4dab;
+  letter-spacing: 0.4px;
+}
+
+.navbar-link:hover,
+.navbar-link:focus {
+  background: #1a4dab;
+  color: #ffffff;
+  box-shadow: 0 8px 22px rgba(26, 77, 171, 0.28);
+  transform: translateY(-2px) scale(1.07);
+}
+/* ---------- Page Background ---------- */
+body {
+  background: linear-gradient(120deg, #f5faff 0%, #e9f3ff 60%, #d3e7fa 100%);
+  font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  margin: 0;
+  color: #1f3765;
+}
+
+/* ---------- Section Heading ---------- */
+.hackathon-section {
+  padding: 40px 16px 48px 16px;
+  text-align: center;
+}
+.hackathon-section h2 {
+  font-size: 2.8rem;
+  font-weight: 900;
+  letter-spacing: 1.6px;
+  color: #1a4dab;
+  margin-bottom: 50px;
+}
+
+/* ---------- Hackathon Grid and Card ---------- */
+.hackathon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 60px;
+  justify-items: center;
+  padding-bottom: 36px;
+}
+
+.hackathon-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 360px;
+  padding: 28px 24px 26px 28px;
+  background: #ffffff;
+  border-radius: 20px;
+  border: 2px solid #d4e5fa;
+  box-shadow: 0 12px 34px rgba(99, 123, 174, 0.274);
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+  user-select: text;
+}
+.hackathon-card:hover {
+  box-shadow: 0 22px 60px rgba(89, 112, 162, 0.951);
+  border-color: #092c55;
+}
+
+/* Title */
+.hackathon-title {
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: #2563eb;
+  margin: 0 0 12px 0;
+  letter-spacing: 0.7px;
+}
+
+/* Description */
+.hackathon-description {
+  font-size: 1.05rem;
+  color: #334155;
+  margin-bottom: 16px;
+  font-weight: 600;
+  opacity: 0.98;
+}
+
+/* Info Section */
+.hackathon-date,
+.hackathon-location,
+.hackathon-prize {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  margin-bottom: 9px;
+  color: #1e40af;
+  font-weight: 700;
+}
+.icon {
+  display: inline-block;
+  margin-right: 8px;
+  color: #2563eb;
+}
+
+/* Tags */
+.hackathon-tags {
+  margin: 14px 0 8px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.tag {
+  background-color: #2563eb;
+  color: #fff;
+  padding: 6px 18px;
+  font-size: 0.98rem;
+  border-radius: 10px;
+  font-weight: 700;
+  letter-spacing: 0.45px;
+  transition: background 0.2s;
+}
+
+/* ---------- Participate Button ---------- */
+.hackathon-button {
+  border: none;
+  outline: none;
+  border-radius: 14px;
+  background: linear-gradient(90deg, #1e40af 0%, #2563eb 100%);
+  color: #ffffff;
+  font-size: 1.12rem;
+  font-weight: 700;
+  padding: 14px 0;
+  width: 83%;
+  margin: 23px auto 0 auto;
+  box-shadow: 0 8px 22px rgba(44, 74, 158, 0.12);
+  cursor: pointer;
+  display: block;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+.hackathon-button:hover {
+  background: linear-gradient(90deg, #2563eb 0%, #1e40af 100%);
+  color: #f0f4ff;
+  transform: translateY(-3px) scale(1.04);
+  box-shadow: 0 12px 34px rgba(37, 99, 235, 0.18);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 920px) {
+  .hackathon-section h2 {
+    font-size: 2rem;
+  }
+  .hackathon-card {
+    max-width: 96vw;
+  }
+}
+@media (max-width: 700px) {
+  .hackathon-grid {
+    grid-template-columns: 1fr;
+  }
+  .hackathon-card {
+    max-width: 98vw;
+    padding: 22px 4vw;
+  }
+}
+
+/* ---------- Modal Backdrop ---------- */
+.participate-modal {
+  position: fixed;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  background: rgba(37, 85, 255, 0.11);
+  display: flex; justify-content: center; align-items: center;
+  z-index: 2000; padding: 28px;
+  overflow-y: auto;
+}
+
+/* ---------- Modal Content ---------- */
+.participate-content {
+  background: #ffffff;
+  width: 480px;
+  max-height: 92vh;
+  border-radius: 20px;
+  padding: 32px 28px;
+  box-shadow: 0 10px 38px rgba(37, 99, 235, 0.18);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow-y: auto;
+}
+
+/* ---------- Heading ---------- */
+.participate-content h3 {
+  margin: 0 0 24px;
+  font-size: 1.7rem;
+  font-weight: 900;
+  color: #2563eb;
+  text-align: center;
+}
+
+/* ---------- Buttons ---------- */
+.participate-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin: 26px 0;
+}
+
+.participate-buttons button {
+  flex: 1;
+  padding: 14px 0;
+  border-radius: 14px;
+  font-weight: 700;
+  font-size: 1.08rem;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  transition: all 0.27s ease;
+}
+
+.participate-buttons .primary {
+  background: linear-gradient(90deg, #2563eb 0%, #1e40af 85%);
+}
+.participate-buttons .primary:hover {
+  background: linear-gradient(90deg, #1e40af 0%, #2563eb 85%);
+}
+
+.participate-buttons .cancel {
+  background: linear-gradient(90deg, #ef4444 0%, #dc2626 90%);
+}
+.participate-buttons .cancel:hover {
+  background: linear-gradient(90deg, #dc2626 0%, #b91c1c 90%);
+}
+
+/* ---------- Inputs ---------- */
+input[type="text"], textarea {
+  width: 100%;
+  padding: 13px 16px;
+  margin-bottom: 18px;
+  border-radius: 12px;
+  border: 2px solid #cbd5e1;
+  font-size: 1.05rem;
+  font-family: inherit;
+  transition: border-color 0.27s, box-shadow 0.2s;
+  background: #f9faff;
+  color: #1e293b;
+}
+
+input[type="text"]:focus, textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 8px #2563eb56;
+  outline: none;
+  background-color: #ffffff;
+}
+
+/* ---------- Team Cards ---------- */
+.team-card {
+  background: #f9fbff;
+  border: 1.8px solid #e0e7ff;
+  border-radius: 14px;
+  padding: 18px 20px;
+  margin-bottom: 16px;
+  box-shadow: 0 3px 14px rgba(37, 99, 235, 0.08);
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+.team-card:hover {
+  border-color: #2563eb;
+  box-shadow: 0 8px 18px rgba(37, 99, 235, 0.16);
+}
+
+/* ---------- Team Header ---------- */
+.team-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.team-header h4 {
+  font-weight: 800;
+  font-size: 1.15rem;
+  color: #2563eb;
+  margin: 0;
+}
+
+.team-header p {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1e40af;
+  margin: 0;
+}
+
+/* ---------- Members ---------- */
+.team-members {
+  padding-top: 11px;
+  border-top: 1.5px solid #e0e7ff;
+}
+.team-members h5 {
+  margin: 0 0 8px;
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: #1e293b;
+}
+.team-members li {
+  font-size: 0.99rem;
+  color: #334155;
+  margin-bottom: 6px;
+}
+
+/* Hide scrollbars */
+body::-webkit-scrollbar {
+  width: 0;
+}
+
+
+/* Container for all join requests */
+.join-requests-container {
+  padding: 28px;
+  max-width: 700px;
+  margin: 0 auto 40px auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  user-select: text;
+  background: #f9fbff;
+  border-radius: 20px;
+  box-shadow: 0 8px 28px rgba(37, 85, 255, 0.12);
+}
+
+.join-request-card {
+  background: #ffffff;
+  border: 1.8px solid #93c5fd;
+  border-radius: 18px;
+  padding: 20px 26px;
+  margin-bottom: 24px;
+  box-shadow: 0 6px 22px rgba(37, 99, 235, 0.15);
+  transition: transform 0.25s ease, box-shadow 0.3s ease;
+  user-select: none;
+}
+
+.join-request-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 38px rgba(37, 99, 235, 0.25);
+}
+
+.join-request-card p {
+  margin: 8px 0;
+  font-weight: 700;
+  color: #1e40af; /* deep blue */
+  font-size: 1.05rem;
+  letter-spacing: 0.35px;
+  user-select: text;
+}
+
+.join-request-buttons {
+  margin-top: 22px;
+  display: flex;
+  gap: 24px;
+  user-select: none;
+}
+
+.join-request-buttons button {
+  flex: 1;
+  padding: 14px 0;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  border: none;
+  letter-spacing: 0.7px;
+  transition: all 0.35s ease;
+  user-select: none;
+}
+
+.join-request-buttons button.accept {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: #fff;
+  box-shadow: 0 0 24px rgba(37, 99, 235, 0.5);
+}
+
+.join-request-buttons button.accept:hover {
+  background: linear-gradient(135deg, #1d4ed8, #163e79);
+  box-shadow: 0 0 34px rgba(30, 64, 175, 0.75);
+  transform: translateY(-3px);
+}
+
+.join-request-buttons button.reject {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  color: #fff;
+  box-shadow: 0 0 24px rgba(239, 68, 68, 0.5);
+}
+
+.join-request-buttons button.reject:hover {
+  background: linear-gradient(135deg, #dc2626, #b91c1c);
+  box-shadow: 0 0 34px rgba(185, 28, 28, 0.75);
+  transform: translateY(-3px);
+}
+
+@media (max-width: 600px) {
+  .join-requests-container {
+    padding: 18px;
+  }
+  .join-request-card {
+    font-size: 0.95rem;
+    padding: 16px 18px;
+  }
+  .join-request-buttons {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .join-request-buttons button {
+    font-size: 1rem;
+  }
+}

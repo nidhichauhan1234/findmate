@@ -1,0 +1,147 @@
+.myteams-container {
+  max-width: 1120px;
+  margin: 38px auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #1e293b;
+  padding: 0 32px;
+}
+
+.myteams-container h1 {
+  margin-bottom: 36px;
+  font-weight: 900;
+  font-size: 2.4rem;
+  letter-spacing: 1px;
+  color: #2563eb;
+}
+
+.team-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  gap: 34px 40px;
+}
+
+.team-card {
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: 0 10px 38px rgba(37, 85, 255, 0.17);
+  border: 2px solid #e0e7ff;
+  padding: 36px 32px 28px 32px;
+  min-height: 270px;
+  user-select: text;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.team-card h2 {
+  margin: 0 0 10px 0;
+  font-weight: 900;
+  font-size: 2rem;
+  color: #2563eb;
+  letter-spacing: 0.5px;
+  word-break: break-all;
+}
+
+.hackathon-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #475569;
+  margin-bottom: 15px;
+  letter-spacing: 0.3px;
+}
+
+.team-details {
+  font-size: 1.08rem;
+  margin-bottom: 12px;
+  color: #334155;
+}
+
+.team-label {
+  font-size: 0.96rem;
+  font-weight: 700;
+  color: #64748b;
+  margin-right: 8px;
+}
+
+.member-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 10px;
+  margin-top: 4px;
+}
+
+.member-link {
+  background: #f1f5ff;
+  padding: 6px 18px;
+  border-radius: 10px;
+  color: #2563eb;
+  font-weight: bold;
+  font-size: 1rem;
+  text-decoration: none;
+  border: 1px solid #c7dffe;
+  transition: background 0.2s;
+}
+
+.member-link:hover {
+  background: #2563eb;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Flashcard-style actions */
+.team-actions {
+  margin-top: 28px;
+  display: flex;
+  gap: 24px;
+}
+
+.team-actions button {
+  flex: 1;
+  padding: 16px 0;
+  font-weight: 900;
+  border: none;
+  border-radius: 16px;
+  background-color: #2563eb;
+  color: white;
+  font-size: 1.13rem;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(37, 85, 255, 0.14);
+  transition: background-color 0.13s;
+}
+
+.team-actions button:hover {
+  background-color: #1e40af;
+}
+
+
+@media (max-width: 950px) {
+  .team-list {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .team-card {
+    max-width: 98vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .myteams-container {
+    padding: 0 8px;
+  }
+  .team-list {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+  .team-card {
+    padding: 22px 10px 18px 10px;
+  }
+  .team-actions {
+    flex-direction: column;
+    gap: 14px;
+  }
+  .team-actions button {
+    font-size: 1.01rem;
+    margin-bottom: 8px;
+  }
+}
